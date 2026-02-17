@@ -5,8 +5,8 @@ import requests
 
 load_dotenv()
 
-def get_weeather(city:str):
-    url = f"https://geocoding-api.open-meteo.com/v1/search?name={city.lower()}"
+def get_weather(city:str):
+    url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={os.getenv('OPEN_WEATHER_API')}&units=metric"
     response = requests.get(url)
     
     if response.status_code == 200:
@@ -30,4 +30,5 @@ def main():
     
     print(f"🤖:{response.choices[0].message.content}")
     
-print(get_weeather("delhi"))
+
+print(main())
