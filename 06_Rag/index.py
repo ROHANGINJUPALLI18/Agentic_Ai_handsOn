@@ -27,14 +27,15 @@ text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=40
 chunks = text_splitter.split_documents(documents=docs)
 
 # to create an vector embeedings for the chunks we need to import the OpenAIEmbeddings
-embeddings = OpenAIEmbeddings(
+embeddings_model = OpenAIEmbeddings(
     model="text-embedding-3-small",
     
 )
+
 # this is stores in the qdrant vector store
 vector_store = QdrantVectorStore.from_documents(
     documents=chunks,
-    embedding=embeddings,
+    embedding=embeddings_model,
     url="http://localhost:6333",
     collection_name="learning-rag",
 )
