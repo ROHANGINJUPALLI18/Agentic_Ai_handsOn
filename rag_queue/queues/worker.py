@@ -30,7 +30,7 @@ def process_query(query:str):
     context = [f"page_content: {doc.page_content}, page_number: {doc.metadata['page']}" for doc in search_result]
     SYSTEM_PROMPT = f"""
     You are an helpful who answers the user query based on the available context retrieved from a PDF file along with page_content and page number. If you don't know the answer, say you don't know.
-    you should only ans the user based in the following context and navigate the user to open the right page number to know more
+    you should only . ans the user based in the following context and navigate the user to open the right page number to know more
     context: {context}
     
     """
