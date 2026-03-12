@@ -28,7 +28,7 @@ def tts(text):
 
 def main():
     r = sr.Recognizer() # Speech to Text
-    
+    # the below line will access the microphone of the system to listen to the user audio, you can use any other audio input method as well
     with sr.Microphone() as source: # Mic Access
         # adjust the recognize sensitivity to ambient noise and record audio from the microphone
         r.adjust_for_ambient_noise(source)
