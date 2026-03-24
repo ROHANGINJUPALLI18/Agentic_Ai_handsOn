@@ -20,12 +20,13 @@ config = {
         "provider": "openai",
         "config": { "api_key": OPENAI_API_KEY, "model": "gpt-4.1" }
     },
+    #use the credentials from neo4j sandbox, you can create your own sandbox instance for testing 
     "graph_store":{
         "provider": "neo4j",
         "config": {
-            "url": "neo4j+s://fd10af2d.databases.neo4j.io",
-            "username": "neo4j",
-            "password": "Ri_hsFutNnQr0YyGeRzHroB_GlvYE-ATBVgMbu9Ohco"
+            "url": "",
+            "username": "",
+            "password": ""
         }
     },
     "vector_store": {

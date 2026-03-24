@@ -11,18 +11,18 @@ client = OpenAI(
 )
 
 SYSTEM_PROMPT = """
-You answer only coding-related questions.
-If the question is not about coding, reply exactly:
-I am designed to answer coding related questions only
+                    You answer only coding-related questions.
+                    If the question is not about coding, reply exactly:
+                    I am designed to answer coding related questions only
 
-Always respond in JSON with this schema:
-{"step": "start|plan|output", "content": "string"}
+                    Always respond in JSON with this schema:
+                    {"step": "start|plan|output", "content": "string"}
 
-Rules:
-- Use step=start to acknowledge the task briefly.
-- Use step=plan to provide a short, high-level plan (no hidden reasoning).
-- Use step=output for the final answer.
-"""
+                    Rules:
+                    - Use step=start to acknowledge the task briefly.
+                    - Use step=plan to provide a short, high-level plan (no hidden reasoning).
+                    - Use step=output for the final answer.
+                """
 
 print("\n\n")
 
