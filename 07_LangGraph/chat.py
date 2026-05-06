@@ -46,6 +46,6 @@ graph_builder.add_edge("sampleNode", END)
 graph = graph_builder.compile()
 
 # invoking the graph
-updated_state = graph.invoke({"messages": ["hi my name is rohan"]})
+updated_state = graph.invoke({"messages": ["hi my name is rohan Ginjupalli"]})
 
 print(f"\n\nfinal state: {updated_state}")
