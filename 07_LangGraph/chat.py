@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv();
 
+# we need to change with the open-ai api key and josn related to it
 llm = init_chat_model(
     model=os.getenv("GEMINI_MODEL", "gemini-2.5-flash"),
     model_provider="google_genai",
