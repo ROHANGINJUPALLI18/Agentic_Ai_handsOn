@@ -38,7 +38,7 @@ graph_builder.add_node("sampleNode", sampleNode)
 graph_builder.add_edge(START, "chatbot")
 # 2. then we are defining an edge from the chatbot node to the sampleNode. This means that after the chatbot function is called, it will call the sampleNode function.
 graph_builder.add_edge("chatbot", "sampleNode")
-# 3. finally we are defining an edge from the sampleNode to the end node. This means that after the sampleNode function is called, it will end the conversation.
+# 3. finally we are defining an edge from the sampleNode to the end node. This means that after the sampleNode function is called, it will end the conversation and that is the end of the conversation.
 graph_builder.add_edge("sampleNode", END)
 
 
